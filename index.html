@@ -16,14 +16,41 @@
             font-size: 30px;
         }
 
+        h1, h2, h3, h4, h5, h6 {
+            display: inline;
+        }
+
         .project {
-            
+            border: 1px solid white;
+            background-color: #505050;
+            border-radius: 10px;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .project:hover {
+            background-color: #606060;
         }
     </style>
 </head>
 <body>
     <h1>Hi, I'm Matthew!</h1>
+    <br>
     <h4>Here is my website.</h3>
-    
+    <hr>
+    <h3>Projects</h3>
+    <br>
+    <br>
+    <div class="project" onclick="open('https://truesungaming.github.io/learn-pi', '_blank')">
+        <h4>Learn π</h4>
+        <br>
+        Learn up to 1000 Digits of π!
+    </div>
+    <br>
+    <div class="project" onclick="open('https://truesungaming.github.io/brot-renderer', '_blank')">
+        <h4>Mandelbrot Set Renderer</h4>
+        <br>
+        Renders the Mandelbrot set. Warning: Can take a while to load!
+    </div>
 </body>
 </html>
