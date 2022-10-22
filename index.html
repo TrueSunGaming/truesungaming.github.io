@@ -14,69 +14,131 @@
             font-family: "Open Sans";
             text-align: center;
             font-size: 30px;
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            position: relative;
+            top: 50px;
         }
 
         h1, h2, h3, h4, h5, h6 {
             display: inline;
         }
 
-        .project {
-            border: 1px solid white;
+        .project, button {
+            border: none;
+            border-right: 3px solid #707070;
+            border-bottom: 3px solid #707070;
             background-color: #505050;
             border-radius: 10px;
-            width: 100%;
             cursor: pointer;
+            color: white
         }
 
-        .project:hover {
+        .project {
+            width: 100%;
+        }
+
+        .project:hover, button:hover {
             background-color: #606060;
+        }
+
+        .container {
+            padding: 10px;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 50%;
+            background-color: #454545;
+            width: 100%;
+            transform: translateX(-50%);
+            border-bottom: 3px solid #707070;
+            padding-bottom: 15px;
+        }
+
+        hr {
+            background-color: #707070;
+            height: 3px;
+            border: none;
+        }
+
+        nav button {
+            font-size: 30px;
+            border: none;
+            border-right: 3px solid #707070;
+            border-bottom: 3px solid #707070;
+            height: 100%;
         }
     </style>
 </head>
 <body>
     <h1>Hi, I'm Matthew!</h1>
     <br>
-    <h4>Here is my website.</h3>
+    <h3>I'm a programmer, this is my website.</h3>
+    <br>
+    <nav>
+        <button onclick="gotoId('')">Back to Top</button>
+        <button onclick="gotoId('websites')">Websites</button>
+        <button onclick="gotoId('tools')">Libraries & Tools</button>
+        <button onclick="gotoId('links')">Links</button>
+    </nav>
+    <br id="websites">
     <hr>
-    <h3>Websites</h3>
+    <h2>Websites</h2>
     <br>
     <br>
-    <div class="project" onclick="window.open('https://truesungaming.github.io/learn-pi', '_blank')">
-        <h4>Learn π</h4>
+    <div class="container">
+        <div class="project" onclick="window.open('https://truesungaming.github.io/learn-pi', '_blank')">
+            <strong>Learn π</strong>
+            <br>
+            Learn up to 1000 digits of π!
+        </div>
         <br>
-        Learn up to 1000 Digits of π!
+        <div class="project" onclick="window.open('https://truesungaming.github.io/brot-renderer', '_blank')">
+            <strong>Mandelbrot Set Renderer</strong>
+            <br>
+            Renders the Mandelbrot set. Warning: Can take a while to load!
+        </div>
     </div>
-    <br>
-    <div class="project" onclick="window.open('https://truesungaming.github.io/brot-renderer', '_blank')">
-        <h4>Mandelbrot Set Renderer</h4>
-        <br>
-        Renders the Mandelbrot set. Warning: Can take a while to load!
-    </div>
-    <br>
+    <br id="tools">
     <hr>
-    <h3>Libraries & Tools</h3>
+    <h2>Libraries & Tools</h2>
     <br>
     <br>
-    <div class="project" onclick="window.open('https://github.com/TrueSunGaming/unblocked-console-js')">
-        <h4>Unblocked Console</h4>
-        <br>
-        <span>Creates a custom web console for if school devices disabled devtools.</span>
+    <div class="container">
+        <div class="project" onclick="window.open('https://github.com/TrueSunGaming/unblocked-console-js')">
+            <strong>Unblocked Console</strong>
+            <br>
+            <span>Creates a custom web console for if school devices disabled devtools.</span>
+        </div>
     </div>
-    <br>
+    <br id="links">
     <hr>
-    <h3>Links</h3>
+    <h2>Links</h2>
     <br>
     <br>
-    <div class="project" onclick="window.open('https://github.com/TrueSunGaming')">
-        <h4>GitHub: TrueSunGaming</h4>
+    <div class="container">
+        <div class="project" onclick="window.open('https://github.com/TrueSunGaming')">
+            <strong>GitHub: TrueSunGaming</strong>
+            <br>
+            <span>Click to visit.</span>
+        </div>
         <br>
-        <span>Click to visit.</span>
+        <div class="project" onclick="navigator.clipboard.writeText('-TrueSunGaming#1305')">
+            <strong>Discord: -TrueSunGaming#1305</strong>
+            <br>
+            Click to copy.
+        </div>
     </div>
-    <br>
-    <div class="project" onclick="navigator.clipboard.writeText('-TrueSunGaming#1305')">
-        <h4>Discord: -TrueSunGaming#1305</h4>
-        <br>
-        Click to copy.
-    </div>
+    <script>
+        function gotoId(id) {
+            location.href = "#";
+            location.href = `#${id}`;
+        }
+    </script>
 </body>
 </html>
