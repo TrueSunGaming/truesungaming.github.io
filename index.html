@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hi</title>
+    <title>TrueSunGaming</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
         html, body {
-            background-color: #454545;
+            background-color: #303030;
             color: white;
             font-family: "Open Sans";
             text-align: center;
@@ -29,9 +29,9 @@
 
         .project, button {
             border: none;
-            border-right: 3px solid #707070;
-            border-bottom: 3px solid #707070;
-            background-color: #505050;
+            border-right: 3px solid #202020;
+            border-bottom: 3px solid #202020;
+            background-color: #353535;
             border-radius: 10px;
             cursor: pointer;
             color: white
@@ -42,7 +42,7 @@
         }
 
         .project:hover, button:hover {
-            background-color: #606060;
+            background-color: #404040;
         }
 
         .container {
@@ -53,15 +53,15 @@
             position: fixed;
             top: 0;
             left: 50%;
-            background-color: #454545;
+            background-color: #303030;
             width: 100%;
             transform: translateX(-50%);
-            border-bottom: 3px solid #707070;
+            border-bottom: 3px solid #353535;
             padding-bottom: 15px;
         }
 
         hr {
-            background-color: #707070;
+            background-color: #454545;
             height: 3px;
             border: none;
         }
@@ -69,8 +69,8 @@
         nav button {
             font-size: 30px;
             border: none;
-            border-right: 3px solid #707070;
-            border-bottom: 3px solid #707070;
+            border-right: 3px solid #454545;
+            border-bottom: 3px solid #454545;
             height: 100%;
         }
     </style>
@@ -78,12 +78,13 @@
 <body>
     <h1>Hi, I'm Matthew!</h1>
     <br>
-    <h3>I'm a programmer, this is my website.</h3>
+    <h3>Welcome to a collection of all of my projects.</h3>
     <br>
     <nav>
         <button onclick="gotoId('')">Back to Top</button>
         <button onclick="gotoId('websites')">Websites</button>
-        <button onclick="gotoId('tools')">Libraries & Tools</button>
+        <button onclick="gotoId('games')">Games</button>
+        <!-- <button onclick="gotoId('tools')">Libraries & Tools</button> -->
         <button onclick="gotoId('links')">Links</button>
     </nav>
     <br id="websites">
@@ -104,7 +105,7 @@
             Renders the Mandelbrot set. Warning: Can take a while to load!
         </div>
     </div>
-    <br id="tools">
+    <!-- <br id="tools">
     <hr>
     <h2>Libraries & Tools</h2>
     <br>
@@ -114,6 +115,18 @@
             <strong>Unblocked Console</strong>
             <br>
             <span>Creates a custom web console for if school devices disabled devtools.</span>
+        </div>
+    </div> -->
+    <br id="games">
+    <hr>
+    <h2>Games</h2>
+    <br>
+    <br>
+    <div class="container">
+        <div class="project" onclick="window.open('https://truesungaming.github.io/industrial-revolution/latest')">
+            <strong>Industrial Revolution (Latest, beta 1.1)</strong>
+            <br>
+            <span>A factory building game inspired by Factorio. Made with Godot.</span>
         </div>
     </div>
     <br id="links">
