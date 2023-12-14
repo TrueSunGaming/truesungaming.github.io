@@ -1,0 +1,41 @@
+[
+    {
+        "title": "Mandelbrot Set Renderer",
+        "icons": ["tool", "typescript"],
+        "description": "A simple renderer for the Mandelbrot set.<br>Warning: Takes a long time to load.",
+        "link": "https://truesungaming.github.io/brot-renderer",
+        "source": "https://github.com/TrueSunGaming/brot-renderer",
+        "release": "8/12/2022",
+        "lastUpdate": "8/12/2022"
+    },
+
+    {
+        "title": "Industrial Revolution",
+        "icons": ["game", "godot"],
+        "description": "A factory building game and automation game inspired by Factorio. Made in Godot 3.5.",
+        "link": "https:/truesungaming.github.io/industrial-revolution",
+        "source": null,
+        "release": "11/14/2022",
+        "lastUpdate": "11/17/2022"
+    },
+
+    {
+        "title": "polynomial.js",
+        "icons": ["library", "javascript"],
+        "description": "A JavaScript library for storing polynomial expressions. Can also solve linear and quadratic equations.",
+        "link": null,
+        "source": "https://github.com/TrueSunGaming/polynomial.js",
+        "release": "12/17/2022",
+        "lastUpdate": "12/17/2022"
+    },
+
+    {
+        "title": "Web Control Panel",
+        "icons": ["tool", "javascript"],
+        "description": "A simple renderer for the Mandelbrot set.<br>Warning: Takes a long time to load.",
+        "link": "https://raw.githubusercontent.com/TrueSunGaming/web-control-panel/main/bookmark.js",
+        "source": "https://github.com/TrueSunGaming/web-control-panel",
+        "release": "12/20/2022",
+        "lastUpdate": "1/30/2023"
+    }
+]

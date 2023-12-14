@@ -37,9 +37,13 @@
         <span slot="title">Projects</span>
         <span slot="description">Personal projects I've worked on over the years.</span>
     </HomepageButton>
-    <HomepageButton href="/">
-        <span slot="title">PLACEHOLDER</span>
-        <span slot="description">PLACEHOLDER</span>
+    <HomepageButton href="/attribution">
+        <span slot="title">Attribution</span>
+        <span slot="description">
+            Attribution for images used on this site.
+            <br>
+            Attribution for individual projects can be found within the respective project.
+        </span>
     </HomepageButton>
 </div>
 

@@ -2,9 +2,13 @@
     import HomepageButton from "$lib/HomepageButton.svelte";
     import { onMount } from "svelte";
     import { fly } from "svelte/transition";
+    import projectData from "$lib/projectData.json";
+    import Icon from "$lib/Icon.svelte";
 
     let loaded = false;
     onMount(() => loaded = true);
+
+    const sortedData = projectData.sort((a, b) => new Date(b.release).getTime() - new Date(a.release).getTime())
 </script>
 
 {#if loaded}
@@ -17,36 +21,50 @@
     <p>loading...</p>
 {/if}
 
-<div>
-    <HomepageButton href="/games">
-        <span slot="title">Games</span>
-        <span slot="description">Games that I've created. Most are made with either HTML5 or Godot.</span>
-    </HomepageButton>
-    <HomepageButton href="/tools">
-        <span slot="title">Tools</span>
-        <span slot="description">Tools that I've created to improve efficiency, automate something, or solve a problem.</span>
-    </HomepageButton>
-</div>
-<br>
-<div>
-    <HomepageButton href="/libraries">
-        <span slot="title">Libraries</span>
-        <span slot="description">Code libraries that I've created.</span>
-    </HomepageButton>
-    <HomepageButton href="/projects">
-        <span slot="title">Miscellaneous</span>
-        <span slot="description">Other things that don't fit into the other categories.</span>
-    </HomepageButton>
-</div>
-<br>
-<div>
-    <HomepageButton href="/">
-        <span slot="title">← Home</span>
-        <span slot="description">Go back to the homepage.</span>
-    </HomepageButton>
-</div>
+<a href="/">
+    Back to Home
+</a>
+
+{#each sortedData as i, idx (idx)}
+    <section>
+        <h2>
+            { i.title }
+            {#each i.icons as src }
+                <Icon { src } fontSize={ 30 }/>
+            {/each}
+        </h2>
+        <p>{ @html i.description }</p>
+        <p>
+            First Release: { i.release }
+            <br>
+            Last Updated: { i.lastUpdate }
+        </p>
+
+        <div>
+            {#if i.link != null}
+                <HomepageButton href={ i.link }>
+                    <span slot="title">Open</span>
+                </HomepageButton>
+            {/if}
+
+            {#if i.source != null}
+                <HomepageButton href={ i.source }>
+                    <span slot="title">Source Code</span>
+                </HomepageButton>
+            {/if}
+        </div>
+    </section>
+{/each}
 
 <style lang="scss">
+    section {
+        border: 3px solid orange;
+        padding: 10px;
+        margin: 10px 0 10px 0;
+        border-radius: 20px;
+        background-color: #202020;
+    }
+    
     div {
         display: flex;
         flex-direction: row;
@@ -62,15 +80,19 @@
         }
     }
 
-    span[slot=title]:is(div * *:hover *) {
+    span[slot=title]:is(div *:hover > * > *) {
         color: orange;
     }
 
-    span[slot=title]:is(div * * *) {
+    span[slot=title]:is(div * > * > *) {
         transition-duration: 250ms;
     }
 
     h1 {
         font-size: 50px;
+    }
+
+    h2 {
+        font-size: 30px;
     }
 </style>
