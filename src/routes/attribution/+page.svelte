@@ -11,7 +11,7 @@
 {#if loaded}
     <h1 in:fly={{ duration: 300, x: -100, opacity: 0 }}>Attribution</h1>
 
-    <p in:fly={{ delay: 200, duration: 300, x: -100, opacity: 0 }}>Attribution for images used on this site.</p>
+    <p in:fly={{ delay: 200, duration: 300, x: -100, opacity: 0 }}>Attribution for language logos used on this site.</p>
 {:else}
     <h1>loading...</h1>
 
