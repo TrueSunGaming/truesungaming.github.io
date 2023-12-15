@@ -92,7 +92,7 @@
     {
         "title": "Tristable Engine (TS Version)",
         "icons": ["library", "typescript"],
-        "description": "A JavaScript/TypeScript game engine for making simple HTML5 games using HTML5 Canvas.<br>Part of my \"company,\" <a href=\"https://github.com/Tristable\">Tristable</a>.",
+        "description": "A JavaScript/TypeScript game engine for making simple HTML5 games using HTML5 Canvas.<br>Part of my \"company,\" <a href=\"https://github.com/Tristable\" target=\"_blank\">Tristable</a>.",
         "link": "https://www.npmjs.com/package/tristable-engine",
         "source": "https://github.com/Tristable/tristable-engine",
         "release": "5/8/2023",
@@ -102,7 +102,7 @@
     {
         "title": "Tristable Engine (C++ Version, WIP)",
         "icons": ["library", "c++"],
-        "description": "A C++ game engine for making simple games using SDL2.<br>Part of my \"company,\" <a href=\"https://github.com/Tristable\">Tristable</a>.",
+        "description": "A C++ game engine for making simple games using SDL2.<br>Part of my \"company,\" <a href=\"https://github.com/Tristable\" target=\"_blank\">Tristable</a>.",
         "link": null,
         "source": "https://github.com/Tristable/tristable-engine-cpp",
         "release": "WIP",
