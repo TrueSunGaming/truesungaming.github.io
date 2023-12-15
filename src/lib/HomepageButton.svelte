@@ -1,8 +1,9 @@
 <script lang="ts">
     export let href: string;
+    export let newtab = false;
 </script>
 
-<a { href }>
+<a { href } target={ newtab ? "_blank" : "" }>
     <h1>
         <slot name="title" />
     </h1>

@@ -29,27 +29,27 @@
 <hr>
 
 <Icon src="godot" fontSize={ 100 } />
-<a href="https://commons.wikimedia.org/wiki/File:Godot_icon.svg">Andrea Calabró</a>, <a href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a>, via Wikimedia Commons
+<a href="https://commons.wikimedia.org/wiki/File:Godot_icon.svg" target="_blank">Andrea Calabró</a>, <a href="https://creativecommons.org/licenses/by/4.0" target="_blank">CC BY 4.0</a>, via Wikimedia Commons
 
 <hr>
 
 <Icon src="javascript" fontSize={ 100 } />
-<a href="https://commons.wikimedia.org/wiki/File:Unofficial_JavaScript_logo_2.svg">Christopher Williams</a>, Public domain, via Wikimedia Commons
+<a href="https://commons.wikimedia.org/wiki/File:Unofficial_JavaScript_logo_2.svg" target="_blank">Christopher Williams</a>, Public domain, via Wikimedia Commons
 
 <hr>
 
 <Icon src="typescript" fontSize={ 100 } />
-<a href="https://commons.wikimedia.org/wiki/File:Typescript_logo_2020.svg">™/®Microsoft</a>, Public domain, via Wikimedia Commons
+<a href="https://commons.wikimedia.org/wiki/File:Typescript_logo_2020.svg" target="_blank">™/®Microsoft</a>, Public domain, via Wikimedia Commons
 
 <hr>
 
 <Icon src="svelte" fontSize={ 100 } />
-<a href="https://github.com/sveltejs/svelte/graphs/contributors">These people</a>, <a href="http://opensource.org/licenses/mit-license.php">MIT</a>, via Wikimedia Commons
+<a href="https://github.com/sveltejs/svelte/graphs/contributors" target="_blank">These people</a>, <a href="http://opensource.org/licenses/mit-license.php" target="_blank">MIT</a>, via Wikimedia Commons
 
 <hr>
 
 <Icon src="c++" fontSize={ 100 } />
-<a href="https://commons.wikimedia.org/wiki/File:ISO_C%2B%2B_Logo.svg">Jeremy Kratz</a>, Public domain, via Wikimedia Commons
+<a href="https://commons.wikimedia.org/wiki/File:ISO_C%2B%2B_Logo.svg" target="_blank">Jeremy Kratz</a>, Public domain, via Wikimedia Commons
 
 <style lang="scss">
     h1 {

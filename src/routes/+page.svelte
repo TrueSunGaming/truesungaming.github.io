@@ -14,7 +14,7 @@
 {#if loaded}
     <h1 in:fly={{ duration: 300, x: -100, opacity: 0 }}>Hi, I'm Matthew!</h1>
 
-    <p in:fly={{ delay: 200, duration: 300, x: -100, opacity: 0 }}>My name is Matthew, but I go by TrueSunGaming online.</p>
+    <p in:fly={{ delay: 200, duration: 300, x: -100, opacity: 0 }}>My name is Matthew, but I go by <a href="https://github.com/TrueSunGaming" target="_blank">TrueSunGaming</a> online.</p>
 
     <p in:fly={{ delay: 400, duration: 300, x: -100, opacity: 0 }}>
         I work with

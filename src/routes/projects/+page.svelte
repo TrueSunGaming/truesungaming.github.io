@@ -93,13 +93,13 @@ Filters:
 
         <div>
             {#if i.link != null}
-                <HomepageButton href={ i.link }>
+                <HomepageButton href={ i.link } newtab>
                     <span slot="title">Open</span>
                 </HomepageButton>
             {/if}
 
             {#if i.source != null}
-                <HomepageButton href={ i.source }>
+                <HomepageButton href={ i.source } newtab>
                     <span slot="title">Source Code</span>
                 </HomepageButton>
             {/if}
@@ -153,7 +153,7 @@ Filters:
         border-radius: 5px;
     }
 
-    select, button {
+    select, input[type=checkbox] {
         cursor: pointer;
     }
 
