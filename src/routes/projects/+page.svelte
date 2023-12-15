@@ -2,13 +2,24 @@
     import HomepageButton from "$lib/HomepageButton.svelte";
     import { onMount } from "svelte";
     import { fly } from "svelte/transition";
-    import projectData from "$lib/projectData.json";
+    import type projectData from "$lib/projectData.json";
     import Icon from "$lib/Icon.svelte";
+    import { type SearchQuery, SortMode, searchProjects } from "$lib/searchProjects";
 
     let loaded = false;
     onMount(() => loaded = true);
 
-    const sortedData: typeof projectData = projectData.sort((a, b) => a.release == "WIP" ? -1 : (new Date(b.release).getTime() - new Date(a.release).getTime()));
+    const searchQuery: SearchQuery = {
+        query: "",
+        showGames: true,
+        showTools: true,
+        showSites: true,
+        showLibs: true
+    };
+
+    let sortMode: SortMode = SortMode.ReleaseDescending;
+
+    $: sortedData = searchProjects(searchQuery, sortMode)!;
 </script>
 
 <svelte:head>
@@ -28,6 +39,29 @@
 <a href="/">
     Back to Home
 </a>
+
+<hr>
+
+<label for="searchQuery">Search: </label>
+<input type="text" name="searchQuery" bind:value={ searchQuery.query }>
+<br>
+
+<label for="showGames">Show Games:</label>
+<input type="checkbox" name="showGames" bind:checked={ searchQuery.showGames }>
+<br>
+
+<label for="showTools">Show Tools:</label>
+<input type="checkbox" name="showTools" bind:checked={ searchQuery.showTools }>
+<br>
+
+<label for="showSites">Show Miscellaenous Websites:</label>
+<input type="checkbox" name="showSites" bind:checked={ searchQuery.showSites }>
+<br>
+
+<label for="showLibs">Show Libraries:</label>
+<input type="checkbox" name="showLibs" bind:checked={ searchQuery.showLibs }>
+
+<hr>
 
 {#each sortedData as i, idx (idx)}
     <section>
@@ -98,5 +132,11 @@
 
     h2 {
         font-size: 30px;
+    }
+
+    input {
+        background-color: #202020;
+        border: 1px solid orange;
+        border-radius: 5px;
     }
 </style>

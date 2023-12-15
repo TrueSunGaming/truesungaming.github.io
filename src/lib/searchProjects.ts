@@ -18,7 +18,13 @@ export interface SearchQuery {
 }
 
 export function filterProjects(query: SearchQuery): typeof projectData {
-    return projectData.filter((v) => v.title.toLowerCase().includes(query.query.toLowerCase()))
+    return projectData.filter((v) => (
+        v.title.toLowerCase().includes(query.query.toLowerCase())
+        && (query.showGames || !v.icons.includes("game"))
+        && (query.showTools || !v.icons.includes("tool"))
+        && (query.showSites || !v.icons.includes("website"))
+        && (query.showLibs || !v.icons.includes("library"))
+    ));
 }
 
 export function sortProjects(projects: typeof projectData, mode: SortMode): typeof projectData | null {
