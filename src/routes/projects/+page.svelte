@@ -8,7 +8,7 @@
     let loaded = false;
     onMount(() => loaded = true);
 
-    const sortedData = projectData.sort((a, b) => a.release == "WIP" ? -1 : (new Date(b.release).getTime() - new Date(a.release).getTime()))
+    const sortedData: typeof projectData = projectData.sort((a, b) => a.release == "WIP" ? -1 : (new Date(b.release).getTime() - new Date(a.release).getTime()));
 </script>
 
 <svelte:head>
