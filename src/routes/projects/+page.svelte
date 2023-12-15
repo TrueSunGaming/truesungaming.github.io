@@ -17,7 +17,7 @@
         showLibs: true
     };
 
-    let sortMode: SortMode = SortMode.ReleaseDescending;
+    let sortMode: SortMode = SortMode.NameAscending;
 
     $: sortedData = searchProjects(searchQuery, sortMode)!;
 </script>
@@ -46,20 +46,33 @@
 <input type="text" name="searchQuery" bind:value={ searchQuery.query }>
 <br>
 
-<label for="showGames">Show Games:</label>
+Filters:
+<br>
 <input type="checkbox" name="showGames" bind:checked={ searchQuery.showGames }>
+<label for="showGames">Games</label>
 <br>
 
-<label for="showTools">Show Tools:</label>
 <input type="checkbox" name="showTools" bind:checked={ searchQuery.showTools }>
+<label for="showTools">Tools</label>
 <br>
 
-<label for="showSites">Show Miscellaenous Websites:</label>
 <input type="checkbox" name="showSites" bind:checked={ searchQuery.showSites }>
+<label for="showSites">Miscellaenous Websites</label>
 <br>
 
-<label for="showLibs">Show Libraries:</label>
 <input type="checkbox" name="showLibs" bind:checked={ searchQuery.showLibs }>
+<label for="showLibs">Libraries</label>
+<br>
+
+<label for="sortMode">Sort Mode: </label>
+<select name="sortMode" bind:value={ sortMode }>
+    <option value={ SortMode.NameAscending }>Name (A to Z)</option>
+    <option value={ SortMode.NameDescending }>Name (Z to A)</option>
+    <option value={ SortMode.ReleaseDescending }>Release Date (Newest)</option>
+    <option value={ SortMode.ReleaseAscending }>Release Date (Oldest)</option>
+    <option value={ SortMode.UpdateDescending }>Last Update (Newest)</option>
+    <option value={ SortMode.UpdateAscending }>Last Update (Oldest)</option>
+</select>
 
 <hr>
 
@@ -134,9 +147,25 @@
         font-size: 30px;
     }
 
-    input {
+    input, select {
         background-color: #202020;
         border: 1px solid orange;
         border-radius: 5px;
+    }
+
+    select, button {
+        cursor: pointer;
+    }
+
+    input[type=checkbox] {
+        appearance: none;
+        width: 16px;
+        height: 16px;
+        transform: translateY(6px);
+        transition-duration: 200ms;
+
+        &:checked {
+            background-color: orange;
+        }
     }
 </style>
