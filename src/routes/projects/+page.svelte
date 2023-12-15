@@ -76,6 +76,8 @@ Filters:
 
 <hr>
 
+<a href="/attribution">Language Logo Attribution</a>
+
 {#each sortedData as i, idx (idx)}
     <section>
         <h2>
