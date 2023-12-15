@@ -18,6 +18,10 @@
     <p>loading...</p>
 {/if}
 
+<svelte:head>
+    <title>Attribution | TrueSunGaming</title>
+</svelte:head>
+
 <a href="/">
     Back to Home
 </a>

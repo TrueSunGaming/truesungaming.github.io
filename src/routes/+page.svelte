@@ -7,6 +7,10 @@
     onMount(() => loaded = true);
 </script>
 
+<svelte:head>
+    <title>TrueSunGaming</title>
+</svelte:head>
+
 {#if loaded}
     <h1 in:fly={{ duration: 300, x: -100, opacity: 0 }}>Hi, I'm Matthew!</h1>
 

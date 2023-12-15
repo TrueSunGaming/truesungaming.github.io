@@ -8,8 +8,12 @@
     let loaded = false;
     onMount(() => loaded = true);
 
-    const sortedData = projectData.sort((a, b) => new Date(b.release).getTime() - new Date(a.release).getTime())
+    const sortedData = projectData.sort((a, b) => a.release == "WIP" ? -1 : (new Date(b.release).getTime() - new Date(a.release).getTime()))
 </script>
+
+<svelte:head>
+    <title>Projects | TrueSunGaming</title>
+</svelte:head>
 
 {#if loaded}
     <h1 in:fly={{ duration: 300, x: -100, opacity: 0 }}>Projects</h1>

@@ -32,10 +32,80 @@
     {
         "title": "Web Control Panel",
         "icons": ["tool", "javascript"],
-        "description": "A simple renderer for the Mandelbrot set.<br>Warning: Takes a long time to load.",
+        "description": "A user interace with all kinds of tools, all built into a bookmarklet.",
         "link": "https://raw.githubusercontent.com/TrueSunGaming/web-control-panel/main/bookmark.js",
         "source": "https://github.com/TrueSunGaming/web-control-panel",
         "release": "12/20/2022",
         "lastUpdate": "1/30/2023"
+    },
+
+    {
+        "title": "Depression Clicker",
+        "icons": ["game", "javascript"],
+        "description": "An idle game inspired by Cookie Clicker. Idea came from a friend.",
+        "link": "https://truesungaming.github.io/depression-clicker",
+        "source": "https://github.com/TrueSunGaming/depression-clicker",
+        "release": "2/24/2023",
+        "lastUpdate": "3/3/2023"
+    },
+
+    {
+        "title": "Learn Pi",
+        "icons": ["tool", "javascript"],
+        "description": "A tool to help learn up to 1000 digits of pi. I used this myself to learn 100 digits!",
+        "link": "https://truesungaming.github.io/learn-pi",
+        "source": "https://github.com/TrueSunGaming/learn-pi",
+        "release": "10/12/2022",
+        "lastUpdate": "3/14/2023"
+    },
+
+    {
+        "title": "Desmos Expression Compiler",
+        "icons": ["tool", "javascript"],
+        "description": "A Lisp-like programming language that compiles to LaTeX expressions used by Desmos Graphing Calculator.",
+        "link": "https://truesungaming.github.io/desmos-expression-compiler",
+        "source": "https://github.com/TrueSunGaming/desmos-expression-compiler",
+        "release": "3/8/2023",
+        "lastUpdate": "4/17/2023"
+    },
+
+    {
+        "title": "Logic Simulator",
+        "icons": ["tool", "godot"],
+        "description": "A simulator of digital logic. Made in Godot 4.2.",
+        "link": "https://tsg-logic-sim.netlify.app",
+        "source": "https://github.com/TrueSunGaming/logic-sim",
+        "release": "8/13/2023",
+        "lastUpdate": "8/13/2023"
+    },
+
+    {
+        "title": "Portfolio",
+        "icons": ["website", "svelte", "typescript"],
+        "description": "The website you're looking at right now.",
+        "link": null,
+        "source": "https://github.com/TrueSunGaming/truesungaming.github.io",
+        "release": "2/12/2023",
+        "lastUpdate": "12/14/2023"
+    },
+
+    {
+        "title": "Tristable Engine (TS Version)",
+        "icons": ["library", "typescript"],
+        "description": "A JavaScript/TypeScript game engine for making simple HTML5 games using HTML5 Canvas.<br>Part of my \"company,\" <a href=\"https://github.com/Tristable\">Tristable</a>.",
+        "link": "https://www.npmjs.com/package/tristable-engine",
+        "source": "https://github.com/Tristable/tristable-engine",
+        "release": "5/8/2023",
+        "lastUpdate": "5/12/2023"
+    },
+
+    {
+        "title": "Tristable Engine (C++ Version, WIP)",
+        "icons": ["library", "c++"],
+        "description": "A C++ game engine for making simple games using SDL2.<br>Part of my \"company,\" <a href=\"https://github.com/Tristable\">Tristable</a>.",
+        "link": null,
+        "source": "https://github.com/Tristable/tristable-engine-cpp",
+        "release": "WIP",
+        "lastUpdate": "11/8/2023"
     }
 ]
