@@ -122,15 +122,6 @@ Filters:
         gap: 30px;
     }
 
-    a {
-        color: orange;
-        transition-duration: 250ms;
-
-        &:hover {
-            color: yellow;
-        }
-    }
-
     span[slot=title]:is(div *:hover > * > *) {
         color: orange;
     }

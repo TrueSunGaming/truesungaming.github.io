@@ -55,13 +55,4 @@
     h1 {
         font-size: 50px;
     }
-
-    a {
-        color: orange;
-        transition-duration: 250ms;
-
-        &:hover {
-            color: yellow;
-        }
-    }
 </style>
