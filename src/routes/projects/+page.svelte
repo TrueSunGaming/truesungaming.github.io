@@ -49,22 +49,30 @@
 Filters:
 <br>
 <input type="checkbox" name="showGames" bind:checked={ searchQuery.showGames }>
-<label for="showGames">Games</label>
+<!-- svelte-ignore a11y-click-events-have-key-events -->
+<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+<label for="showGames" on:click={ () => searchQuery.showGames = !searchQuery.showGames }>Games</label>
 <br>
 
 <input type="checkbox" name="showTools" bind:checked={ searchQuery.showTools }>
-<label for="showTools">Tools</label>
+<!-- svelte-ignore a11y-click-events-have-key-events -->
+<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+<label for="showTools" on:click={ () => searchQuery.showTools = !searchQuery.showTools }>Tools</label>
 <br>
 
 <input type="checkbox" name="showSites" bind:checked={ searchQuery.showSites }>
-<label for="showSites">Miscellaenous Websites</label>
+<!-- svelte-ignore a11y-click-events-have-key-events -->
+<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+<label for="showSites" on:click={ () => searchQuery.showSites = !searchQuery.showSites }>Miscellaenous Websites</label>
 <br>
 
 <input type="checkbox" name="showLibs" bind:checked={ searchQuery.showLibs }>
-<label for="showLibs">Libraries</label>
+<!-- svelte-ignore a11y-click-events-have-key-events -->
+<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+<label for="showLibs" on:click={ () => searchQuery.showLibs = !searchQuery.showLibs }>Libraries</label>
 <br>
 
-<label for="sortMode">Sort Mode: </label>
+<label for="sortMode" id="sortModeLabel">Sort Mode:</label>
 <select name="sortMode" bind:value={ sortMode }>
     <option value={ SortMode.NameAscending }>Name (A to Z)</option>
     <option value={ SortMode.NameDescending }>Name (Z to A)</option>
@@ -111,25 +119,17 @@ Filters:
 
 <style lang="scss">
     section {
-        border: 3px solid orange;
         padding: 10px;
-        margin: 10px 0 10px 0;
+        margin: 10px 0 20px 0;
         border-radius: 20px;
-        background-color: #202020;
+        background-color: hsl(0, 0%, 25%);
+        box-shadow: 0 10px 0 hsl(0, 0%, 15%);    
     }
     
     div {
         display: flex;
         flex-direction: row;
         gap: 30px;
-    }
-
-    span[slot=title]:is(div *:hover > * > *) {
-        color: orange;
-    }
-
-    span[slot=title]:is(div * > * > *) {
-        transition-duration: 250ms;
     }
 
     h1 {
@@ -141,24 +141,31 @@ Filters:
     }
 
     input, select {
-        background-color: #202020;
-        border: 1px solid orange;
+        background-color: hsl(0, 0%, 20%);
+        box-shadow: 0 5px 0 hsl(0, 0%, 10%);
+        margin-bottom: 5px;
         border-radius: 5px;
+        border: none;
+        padding: 3px;
     }
 
-    select, input[type=checkbox] {
+    select, input[type=checkbox], label:not(#sortModeLabel) {
         cursor: pointer;
+        user-select: none;
     }
 
     input[type=checkbox] {
         appearance: none;
         width: 16px;
         height: 16px;
-        transform: translateY(6px);
+        transform: translateY(4.5px);
         transition-duration: 200ms;
+        box-shadow: 0 3px 0 hsl(0, 0%, 10%);
+        margin-bottom: 3px;
 
         &:checked {
-            background-color: orange;
+            background-color: hsl(30, 100%, 50%);
+            box-shadow: 0 3px 0 hsl(30, 100%, 40%);
         }
     }
 </style>

@@ -15,8 +15,9 @@
 <style lang="scss">
     a {
         display: inline-block;
-        background-image: linear-gradient(90deg, #303030, #505050, orange);
-        border: 3px solid #707070;
+        background-color: hsl(0, 0%, 30%);
+        box-shadow: 0 5px 0 hsl(0, 0%, 20%);
+        margin-bottom: 5px;
         flex: 1;
         padding: 20px;
         text-decoration: none;
@@ -24,11 +25,10 @@
         transition-duration: 250ms;
         position: relative;
         z-index: 1;
-        background-size: 160% 100%;
 
         &:hover {
-            border: 3px solid orange;
-            background-position-x: 60%;
+            background-color: hsl(30, 80%, 50%);
+            box-shadow: 0 5px 0 hsl(30, 80%, 40%);
         }
     }
 </style>

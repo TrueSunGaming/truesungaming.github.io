@@ -50,14 +50,6 @@
         gap: 30px;
     }
 
-    span[slot=title]:is(div * *:hover *) {
-        color: orange;
-    }
-
-    span[slot=title]:is(div * * *) {
-        transition-duration: 250ms;
-    }
-
     h1 {
         font-size: 50px;
     }
