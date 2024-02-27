@@ -32,7 +32,7 @@
     {
         "title": "Web Control Panel",
         "icons": ["tool", "javascript"],
-        "description": "A user interace with all kinds of tools, all built into a bookmarklet.",
+        "description": "A user interface with all kinds of tools, all built into a bookmarklet.",
         "link": "https://raw.githubusercontent.com/TrueSunGaming/web-control-panel/main/bookmark.js",
         "source": "https://github.com/TrueSunGaming/web-control-panel",
         "release": "12/20/2022",
@@ -67,6 +67,16 @@
         "source": "https://github.com/TrueSunGaming/desmos-expression-compiler",
         "release": "3/8/2023",
         "lastUpdate": "4/17/2023"
+    },
+
+    {
+        "title": "Desmos Expression Compiler 2",
+        "icons": ["tool", "svelte", "typescript"],
+        "description": "A C-like programming language that compiles to LaTeX expressions used by Desmos Graphing Calculator. An improved version of my old Desmos Expression Compiler.",
+        "link": "https://dec2.netlify.app",
+        "source": "https://github.com/TrueSunGaming/dec-2",
+        "release": "2/23/2024",
+        "lastUpdate": "2/23/2024"
     },
 
     {
